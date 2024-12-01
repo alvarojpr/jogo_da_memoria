@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js.js"></script>
+    <title>Desafio da Memoria</title>
+</head>
+
+<body>
+    <div class="grid"></div><!--onde aparecem os trem-->
+    <div id="pontos"></div><!--marca a pontuação-->
+    <div id="botao"><!--botão de iniciar-->
+        Regras: Você deve encontrar os pares das cartas, para cada acerto é somado 10 pontos e para cada erro é subtraído 5.
+        Tente atingir a maior pontuação possível (60).
+        <button id="comecar" onclick="carregarJogo()">COMEÇAR</button>
+    </div>
+    <div id="vitoria">PARABÉNS, VOCÊ VENCEU</div><!--mensagem de vitorial-->
+</body>
+
+</html>

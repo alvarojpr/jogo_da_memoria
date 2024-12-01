@@ -1,0 +1,75 @@
+body{
+    background-color: rgba(105, 36, 169, 0.489);
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*(n, tam) n = numero de vezes que repete / tam = tamanho/ 4 colunas de 1 fraçao cada*/
+    gap: 15px; /*distanciamento de 15px*/
+    max-width: 800px;
+    height: 100%;
+    background-color:deeppink;
+    margin: 0 auto;/*usado para centralizar*/
+}
+#vitoria{
+    display: none;
+    padding-left: 500px;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    color:rgba(0, 81, 255, 0.836);
+}
+#pontos{
+    display: none;
+    padding-left: 500px;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    color:rgba(0, 81, 255, 0.836);
+}
+#botao{
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    color:rgba(0, 81, 255, 0.836);
+}
+button{
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 33%;
+    cursor: pointer;
+    background-color: rgb(40, 40, 47);
+}
+.carta{
+    aspect-ratio: 3/4;/*independente da largura, ele ajusta a altura para essa proporção de 3/4*/
+    width: 100%;
+    border-radius: 5px;/*para arredondar bordas*/
+    position: relative;/*quando uma carta subir na outra, não vazar pros lados*/
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;/*usado pra deixar uma carta em cima da outra*/
+    background-size: cover;/*cubra a div*/
+    background-position: center;/*alinhe ao centro*/
+    border: 2px solid rgb(4, 0, 255);
+    transition: all 400ms ease;
+}
+.frente{
+    transform: rotateY(180deg);
+}
+.tras{
+    background-image: url('imagens/interrogacao.jpg');/*essa é a imagem da carta tampada*/
+    backface-visibility: hidden;/*esconde a parte de tras da carta*/
+}
+.revelar-carta{
+    transform: rotateY(180deg);
+}
+.carta-acertada{
+    background-image: url('imagens/ok.jpg');
+}
